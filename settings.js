@@ -1,7 +1,7 @@
 const settings = {
   packname: 'Vosty',
   author: 'Bot',
-  botName: "Steve Bot",
+  botName: "Knight Bot",
   botOwner: 'Stephen', // Your name
   ownerNumber: '+254762414548', //Your number
   giphyApiKey: 'qnl7ssQChTdPjsKta2Ax2LMaGXz303tq',
