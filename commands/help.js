@@ -116,7 +116,14 @@ Join our channel for updates:`;
             
             await sock.sendMessage(chatId, {
                 image: imageBuffer,
-                caption: helpMessage,
+                caption: helpMessage,{
+                    forwardingScore: 999,
+                 isForwarded: true,
+                 forwardedNewsletterMessageInfo: {
+                     newsletterJid: '120363161513685998@newsletter',
+                     newsletterName: 'KnightBot MD',
+                     serverMessageId: -1
+                }
                 }
             });
         } else {
