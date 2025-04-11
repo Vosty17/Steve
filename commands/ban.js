@@ -42,7 +42,7 @@ async function banCommand(sock, chatId, message) {
         }
     } catch (error) {
         console.error('Error in ban command:', error);
-        await sock.sendMessage(chatId, { text: 'Failed to ban user!', ...channelInfo });
+        await sock.sendMessage(chatId, { text: 'Failed to ban user!',  });
     }
 }
 
