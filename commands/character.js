@@ -67,7 +67,7 @@ async function characterCommand(sock, chatId, message) {
             image: { url: profilePic },
             caption: analysis,
             mentions: [userToAnalyze],
-            ...channelInfo
+        
         });
 
     } catch (error) {
