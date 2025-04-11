@@ -116,9 +116,10 @@ Join our channel for updates:`;
             
             await sock.sendMessage(chatId, {
                 image: imageBuffer,
-                caption: helpMessage,{
+                caption: helpMessage,
+                contextinfo:{
                     forwardingScore: 999,
-                 isForwarded: true,
+                    isForwarded: true,
                  forwardedNewsletterMessageInfo: {
                      newsletterJid: '120363161513685998@newsletter',
                      newsletterName: 'KnightBot MD',
