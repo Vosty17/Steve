@@ -117,7 +117,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             if (Math.random() < 0.1) { 
                 await sock.sendMessage(chatId, { 
                     text: '❌ You are banned from using the bot. Contact an admin to get unbanned.',
-                    ...channelInfo
+                    
                 });
             }
             return;
@@ -132,8 +132,8 @@ async function handleMessages(sock, messageUpdate, printLog) {
         // Basic message response in private chat
         if (!isGroup && (userMessage === 'hi' || userMessage === 'hello' || userMessage === 'bot' || userMessage === 'hlo' || userMessage === 'hey' || userMessage === 'bro')) {
             await sock.sendMessage(chatId, {
-                text: 'Hi, How can I help you?\nYou can use .menu for more info and commands.',
-                ...channelInfo
+                text: 'Hi, How can I help you?',
+                
             });
             return;
         }
@@ -184,7 +184,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 if (!isSenderAdmin && !message.key.fromMe) {
                     await sock.sendMessage(chatId, { 
                         text: 'Sorry, only group admins can use this command.',
-                        ...channelInfo
+                        
                     });
                     return;
                 }
