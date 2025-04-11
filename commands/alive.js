@@ -13,9 +13,6 @@ async function aliveCommand(sock, chatId) {
 
         await sock.sendMessage(chatId, {
             text: message,
-            contextInfo: {
-                }
-            }
         });
     } catch (error) {
         console.error('Error in alive command:', error);
