@@ -16,7 +16,7 @@ async function banCommand(sock, chatId, message) {
     if (!userToBan) {
         await sock.sendMessage(chatId, { 
             text: 'Please mention the user or reply to their message to ban!', 
-            ...channelInfo 
+            
         });
         return;
     }
@@ -31,13 +31,13 @@ async function banCommand(sock, chatId, message) {
             await sock.sendMessage(chatId, { 
                 text: `Successfully banned @${userToBan.split('@')[0]}!`,
                 mentions: [userToBan],
-                ...channelInfo 
+                 
             });
         } else {
             await sock.sendMessage(chatId, { 
                 text: `${userToBan.split('@')[0]} is already banned!`,
                 mentions: [userToBan],
-                ...channelInfo 
+                
             });
         }
     } catch (error) {
