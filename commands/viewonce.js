@@ -118,7 +118,6 @@ async function viewOnceCommand(sock, chatId, message) {
                 await sock.sendMessage(chatId, { 
                     video: fs.readFileSync(tempFile),
                     caption: `*💀 KnightBot Anti ViewOnce 💀*\n\n*Type:* Video 📹\n${caption ? `*Caption:* ${caption}` : ''}`,
-                    ...channelInfo
                 });
 
                 // Clean up temp file
