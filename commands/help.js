@@ -117,22 +117,12 @@ Join our channel for updates:`;
             await sock.sendMessage(chatId, {
                 image: imageBuffer,
                 caption: helpMessage,
-                contextInfo: {
-                
-                        newsletterName: 'Karibu kenya😂',
-                    
-                    }
                 }
             });
         } else {
             console.error('Bot image not found at:', imagePath);
             await sock.sendMessage(chatId, { 
                 text: helpMessage,
-                contextInfo: {
-                    newsletterName: 'Karibu kenya😂',
-            
-                    } 
-                }
             });
         }
     } catch (error) {
