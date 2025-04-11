@@ -118,14 +118,14 @@ async function clearSessionCommand(sock, chatId, senderId) {
 
         await sock.sendMessage(chatId, { 
             text: resultMessage,
-            ...channelInfo
+            
         });
 
     } catch (error) {
         console.error('Error in clearsession command:', error);
         await sock.sendMessage(chatId, { 
             text: '❌ Error occurred while optimizing sessions!\n' + error.message,
-            ...channelInfo
+            
         });
     }
 }
