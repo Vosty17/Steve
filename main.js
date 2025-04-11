@@ -283,7 +283,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                     const currentMode = data.isPublic ? 'public' : 'private';
                     await sock.sendMessage(chatId, { 
                         text: `Current bot mode: *${currentMode}*\n\nUsage: .mode public/private\n\nExample:\n.mode public - Allow everyone to use bot\n.mode private - Restrict to owner only`,
-                        ...channelInfo
+            
                     });
                     return;
                 }
@@ -291,7 +291,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 if (action !== 'public' && action !== 'private') {
                     await sock.sendMessage(chatId, { 
                         text: 'Usage: .mode public/private\n\nExample:\n.mode public - Allow everyone to use bot\n.mode private - Restrict to owner only',
-                        ...channelInfo
+                    
                     });
                     return;
                 }
@@ -327,14 +327,14 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 if (!isGroup) {
                     await sock.sendMessage(chatId, { 
                         text: 'This command can only be used in groups.',
-                        ...channelInfo 
+                        
                     });
                     return;
                 }
                 if (!isBotAdmin) {
                     await sock.sendMessage(chatId, { 
                         text: 'Please make the bot an admin first.',
-                        ...channelInfo 
+                    
                     });
                     return;
                 }
@@ -565,7 +565,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                     if (!text) {
                         await sock.sendMessage(chatId, { 
                             text: `❌ Please provide a search term!\n\nExample: .play harleys in hawaii`,
-                            ...channelInfo
+                            
                         });
                         return;
                     }
@@ -575,7 +575,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                     if (!search.videos.length) {
                         await sock.sendMessage(chatId, { 
                             text: '❌ No results found!',
-                            ...channelInfo
+                            
                         });
                         return;
                     }
@@ -585,7 +585,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                     // Send processing message
                     await sock.sendMessage(chatId, { 
                         text: `🎵 Downloading: ${video.title}\n⏳ Please wait...`,
-                        ...channelInfo
+                        
                     });
 
                     // Download and process audio
@@ -622,7 +622,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                     console.error('Error in play command:', error);
                     await sock.sendMessage(chatId, { 
                         text: '❌ Failed to play audio! Try again later.',
-                        ...channelInfo
+                    
                     });
                 }
                 break;
@@ -653,7 +653,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
         if (chatId) {
             await sock.sendMessage(chatId, { 
                 text: '❌ Failed to process command!',
-                ...channelInfo
+            
             });
         }
     }
