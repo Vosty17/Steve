@@ -43,7 +43,7 @@ async function unbanCommand(sock, chatId, message) {
         }
     } catch (error) {
         console.error('Error in unban command:', error);
-        await sock.sendMessage(chatId, { text: 'Failed to unban user!', ...channelInfo });
+        await sock.sendMessage(chatId, { text: 'Failed to unban user!', });
     }
 }
 
