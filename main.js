@@ -93,7 +93,7 @@ const aiCommand = require('./commands/ai');
 global.packname = settings.packname;
 global.author = settings.author;
 global.channelLink = "https://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A";
-global.ytch = "Mr Unique Hacker";
+global.ytch = "Eng.Stephen";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
@@ -102,7 +102,7 @@ const channelInfo = {
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
             newsletterJid: '120363161513685998@newsletter',
-            newsletterName: 'KnightBot MD',
+            newsletterName: 'Vosty',
             serverMessageId: -1
         }
     }
@@ -146,7 +146,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             if (Math.random() < 0.1) {
                 await sock.sendMessage(chatId, {
                     text: '❌ You are banned from using the bot. Contact an admin to get unbanned.',
-                    ...channelInfo
+                    
                 });
             }
             return;
@@ -162,7 +162,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
           if (!isGroup && (userMessage === 'hi' || userMessage === 'hello' || userMessage === 'bot' || userMessage === 'hlo' || userMessage === 'hey' || userMessage === 'bro')) {
               await sock.sendMessage(chatId, {
                   text: 'Hi, How can I help you?\nYou can use .menu for more info and commands.',
-                  ...channelInfo
+                  
               });
               return;
           } */
@@ -218,7 +218,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 if (!isSenderAdmin && !message.key.fromMe) {
                     await sock.sendMessage(chatId, {
                         text: 'Sorry, only group admins can use this command.',
-                        ...channelInfo
+                        
                     });
                     return;
                 }
@@ -231,7 +231,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             if (!message.key.fromMe) {
                 await sock.sendMessage(chatId, {
                     text: '❌ This command is only available for the owner!',
-                    ...channelInfo
+                    
                 });
                 return;
             }
@@ -327,7 +327,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                     const currentMode = data.isPublic ? 'public' : 'private';
                     await sock.sendMessage(chatId, {
                         text: `Current bot mode: *${currentMode}*\n\nUsage: .mode public/private\n\nExample:\n.mode public - Allow everyone to use bot\n.mode private - Restrict to owner only`,
-                        ...channelInfo
+                        
                     });
                     return;
                 }
@@ -335,7 +335,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 if (action !== 'public' && action !== 'private') {
                     await sock.sendMessage(chatId, {
                         text: 'Usage: .mode public/private\n\nExample:\n.mode public - Allow everyone to use bot\n.mode private - Restrict to owner only',
-                        ...channelInfo
+                    
                     });
                     return;
                 }
@@ -372,14 +372,14 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 if (!isGroup) {
                     await sock.sendMessage(chatId, {
                         text: 'This command can only be used in groups.',
-                        ...channelInfo
+                        
                     });
                     return;
                 }
                 if (!isBotAdmin) {
                     await sock.sendMessage(chatId, {
                         text: 'Please make the bot an admin first.',
-                        ...channelInfo
+                        
                     });
                     return;
                 }
@@ -740,7 +740,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
         if (chatId) {
             await sock.sendMessage(chatId, {
                 text: '❌ Failed to process command!',
-                ...channelInfo
+                
             });
         }
     }
