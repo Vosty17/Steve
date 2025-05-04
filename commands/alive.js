@@ -15,6 +15,7 @@ async function aliveCommand(sock, chatId) {
         await sock.sendMessage(chatId, {
             text: message,
             contextInfo: {
+                name="Karibu kenya",
                 }
             }
         });
