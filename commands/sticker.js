@@ -110,15 +110,7 @@ async function stickerCommand(sock, chatId, message) {
         console.error('Error in sticker command:', error);
         await sock.sendMessage(chatId, { 
             text: 'Failed to create sticker! Try again later.',
-            contextInfo: {
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
-                    serverMessageId: -1
-                }
-            }
+    
         });
     }
 }
