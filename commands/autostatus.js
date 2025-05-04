@@ -2,8 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 const channelInfo = {
-
-    }
 };
 
 // Path to store auto status configuration
