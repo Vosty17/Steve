@@ -167,7 +167,7 @@ Join our channel for updates:`;
             await sock.sendMessage(chatId, { 
                 text: helpMessage,
             
-            }
+            }}
             });
         }
     } catch (error) {
