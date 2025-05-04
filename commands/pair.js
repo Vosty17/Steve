@@ -6,15 +6,6 @@ async function pairCommand(sock, chatId, message, q) {
         if (!q) {
             return await sock.sendMessage(chatId, {
                 text: "Please provide valid WhatsApp number\nExample: .pair 91702395XXXX",
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
-                        serverMessageId: -1
-                    }
-                }
             });
         }
 
@@ -44,29 +35,13 @@ async function pairCommand(sock, chatId, message, q) {
             if (!result[0]?.exists) {
                 return await sock.sendMessage(chatId, {
                     text: `That number is not registered on WhatsApp❗️`,
-                    contextInfo: {
-                        forwardingScore: 1,
-                        isForwarded: true,
-                        forwardedNewsletterMessageInfo: {
-                            newsletterJid: '120363161513685998@newsletter',
-                            newsletterName: 'KnightBot MD',
-                            serverMessageId: -1
-                        }
-                    }
+                
                 });
             }
 
             await sock.sendMessage(chatId, {
                 text: "Wait a moment for the code",
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
-                        serverMessageId: -1
-                    }
-                }
+    
             });
 
             try {
