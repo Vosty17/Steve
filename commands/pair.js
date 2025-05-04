@@ -16,15 +16,7 @@ async function pairCommand(sock, chatId, message, q) {
         if (numbers.length === 0) {
             return await sock.sendMessage(chatId, {
                 text: "Invalid number❌️ Please use the correct format!",
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
-                        serverMessageId: -1
-                    }
-                }
+    
             });
         }
 
@@ -56,15 +48,7 @@ async function pairCommand(sock, chatId, message, q) {
                     await sleep(5000);
                     await sock.sendMessage(chatId, {
                         text: `Your pairing code: ${code}`,
-                        contextInfo: {
-                            forwardingScore: 1,
-                            isForwarded: true,
-                            forwardedNewsletterMessageInfo: {
-                                newsletterJid: '120363161513685998@newsletter',
-                                newsletterName: 'KnightBot MD',
-                                serverMessageId: -1
-                            }
-                        }
+                    
                     });
                 } else {
                     throw new Error('Invalid response from server');
@@ -77,15 +61,7 @@ async function pairCommand(sock, chatId, message, q) {
                 
                 await sock.sendMessage(chatId, {
                     text: errorMessage,
-                    contextInfo: {
-                        forwardingScore: 1,
-                        isForwarded: true,
-                        forwardedNewsletterMessageInfo: {
-                            newsletterJid: '120363161513685998@newsletter',
-                            newsletterName: 'KnightBot MD',
-                            serverMessageId: -1
-                        }
-                    }
+                
                 });
             }
         }
@@ -93,15 +69,6 @@ async function pairCommand(sock, chatId, message, q) {
         console.error(error);
         await sock.sendMessage(chatId, {
             text: "An error occurred. Please try again later.",
-            contextInfo: {
-                forwardingScore: 1,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
-                    serverMessageId: -1
-                }
-            }
         });
     }
 }
