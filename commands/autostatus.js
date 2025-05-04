@@ -45,7 +45,7 @@ async function autoStatusCommand(sock, chatId, msg, args) {
             fs.writeFileSync(configPath, JSON.stringify(config));
             await sock.sendMessage(chatId, { 
                 text: '✅ Auto status view has been enabled!\nBot will now automatically view all contact statuses.',
-                ...channelInfo
+                
             });
         } else if (command === 'off') {
             config.enabled = false;
