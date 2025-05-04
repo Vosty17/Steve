@@ -1,7 +1,7 @@
 const settings = require("../settings");
 async function aliveCommand(sock, chatId) {
     try {
-        const message = `*🤖 Knight Bot is Active!*\n\n` +
+        const message = `*🤖 Vosty Bot is Active!*\n\n` +
                        `*Version:* ${settings.version}\n` +
                        `*Status:* Online\n` +
                        `*Mode:* Public\n\n` +
@@ -10,7 +10,7 @@ async function aliveCommand(sock, chatId) {
                        `• Antilink Protection\n` +
                        `• Fun Commands\n` +
                        `• And more!\n\n` +
-                       `Type *.menu* for full command list`;
+                       `Type *.menu* for full`;
 
         await sock.sendMessage(chatId, {
             text: message,
