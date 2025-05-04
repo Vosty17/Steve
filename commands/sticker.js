@@ -20,15 +20,7 @@ async function stickerCommand(sock, chatId, message) {
     if (!mediaMessage) {
         await sock.sendMessage(chatId, { 
             text: 'Please reply to an image, video or GIF to create a sticker.',
-            contextInfo: {
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
-                    serverMessageId: -1
-                }
-            }
+
         });
         return;
     }
@@ -42,15 +34,6 @@ async function stickerCommand(sock, chatId, message) {
         if (!mediaBuffer) {
             await sock.sendMessage(chatId, { 
                 text: 'Failed to download media. Please try again.',
-                contextInfo: {
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
-                        serverMessageId: -1
-                    }
-                }
             });
             return;
         }
