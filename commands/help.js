@@ -166,15 +166,8 @@ Join our channel for updates:`;
             console.error('Bot image not found at:', imagePath);
             await sock.sendMessage(chatId, { 
                 text: helpMessage,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                
-                        newsletterName: 'Vosty Bot by Stephen ',
-                        
-                    } 
-                }
+            
+            }
             });
         }
     } catch (error) {
