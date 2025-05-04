@@ -3,15 +3,7 @@ const path = require('path');
 const os = require('os');
 
 const channelInfo = {
-    contextInfo: {
-        forwardingScore: 999,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363161513685998@newsletter',
-            newsletterName: 'KnightBot MD',
-            serverMessageId: -1
-        }
-    }
+    
 };
 
 async function clearSessionCommand(sock, chatId, msg) {
@@ -20,7 +12,7 @@ async function clearSessionCommand(sock, chatId, msg) {
         if (!msg.key.fromMe) {
             await sock.sendMessage(chatId, { 
                 text: '❌ This command can only be used by the owner!',
-                ...channelInfo
+                
             });
             return;
         }
@@ -31,7 +23,7 @@ async function clearSessionCommand(sock, chatId, msg) {
         if (!fs.existsSync(sessionDir)) {
             await sock.sendMessage(chatId, { 
                 text: '❌ Session directory not found!',
-                ...channelInfo
+                
             });
             return;
         }
@@ -43,7 +35,7 @@ async function clearSessionCommand(sock, chatId, msg) {
         // Send initial status
         await sock.sendMessage(chatId, { 
             text: `🔍 Optimizing session files for better performance...`,
-            ...channelInfo
+            
         });
 
         const files = fs.readdirSync(sessionDir);
@@ -83,14 +75,14 @@ async function clearSessionCommand(sock, chatId, msg) {
 
         await sock.sendMessage(chatId, { 
             text: message,
-            ...channelInfo
+            
         });
 
     } catch (error) {
         console.error('Error in clearsession command:', error);
         await sock.sendMessage(chatId, { 
             text: '❌ Failed to clear session files!',
-            ...channelInfo
+            
         });
     }
 }
