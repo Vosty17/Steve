@@ -9,7 +9,6 @@ const channelInfo = {
 const messageTemplates = {
     error: (message) => ({
         text: message,
-        contextInfo: channelInfo
     }),
     success: (text, imageUrl) => ({
         image: { url: imageUrl },
