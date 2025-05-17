@@ -14,7 +14,7 @@ async function aliveCommand(sock, chatId) {
 
         await sock.sendMessage(chatId, {
             text: message,
-            contextInfo: {
+           /* contextInfo: {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
@@ -22,7 +22,7 @@ async function aliveCommand(sock, chatId) {
                     newsletterName: 'KnightBot MD',
                     serverMessageId: -1
                 }
-            }
+            }*/
         });
     } catch (error) {
         console.error('Error in alive command:', error);
