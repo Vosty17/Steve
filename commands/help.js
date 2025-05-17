@@ -158,7 +158,7 @@ Join our channel for updates:`;
             await sock.sendMessage(chatId, {
                 image: imageBuffer,
                 caption: helpMessage,
-                contextInfo: {
+                /*contextInfo: {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
@@ -166,7 +166,7 @@ Join our channel for updates:`;
                         newsletterName: 'KnightBot MD by Mr Unique Hacker',
                         serverMessageId: -1
                     }
-                }
+                }*/
             });
         } else {
             console.error('Bot image not found at:', imagePath);
