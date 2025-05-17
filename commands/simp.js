@@ -33,7 +33,7 @@ async function simpCommand(sock, chatId, quotedMsg, mentionedJid, sender) {
         await sock.sendMessage(chatId, {
             image: imageBuffer,
             caption: '*your religion is simping*',
-            contextInfo: {
+            /*contextInfo: {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
@@ -41,14 +41,14 @@ async function simpCommand(sock, chatId, quotedMsg, mentionedJid, sender) {
                     newsletterName: 'KnightBot MD',
                     serverMessageId: -1
                 }
-            }
+            }*/
         });
 
     } catch (error) {
         console.error('Error in simp command:', error);
         await sock.sendMessage(chatId, { 
             text: '❌ Sorry, I couldn\'t generate the simp card. Please try again later!',
-            contextInfo: {
+            /*contextInfo: {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
@@ -56,7 +56,7 @@ async function simpCommand(sock, chatId, quotedMsg, mentionedJid, sender) {
                     newsletterName: 'KnightBot MD',
                     serverMessageId: -1
                 }
-            }
+            }*/
         });
     }
 }
