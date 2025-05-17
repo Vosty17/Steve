@@ -12,7 +12,7 @@ _Star ⭐ the repository if you like the bot!_`;
     try {
         await sock.sendMessage(chatId, {
             text: repoInfo,
-            contextInfo: {
+           /* contextInfo: {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
@@ -20,7 +20,7 @@ _Star ⭐ the repository if you like the bot!_`;
                     newsletterName: 'KnightBot MD',
                     serverMessageId: -1
                 }
-            }
+            }*/
         });
     } catch (error) {
         console.error('Error in github command:', error);
