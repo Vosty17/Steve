@@ -6,7 +6,7 @@ async function pairCommand(sock, chatId, message, q) {
         if (!q) {
             return await sock.sendMessage(chatId, {
                 text: "Please provide valid WhatsApp number\nExample: .pair 91702395XXXX",
-                contextInfo: {
+                /*contextInfo: {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
@@ -14,7 +14,7 @@ async function pairCommand(sock, chatId, message, q) {
                         newsletterName: 'KnightBot MD',
                         serverMessageId: -1
                     }
-                }
+                }*/
             });
         }
 
@@ -25,7 +25,7 @@ async function pairCommand(sock, chatId, message, q) {
         if (numbers.length === 0) {
             return await sock.sendMessage(chatId, {
                 text: "Invalid number❌️ Please use the correct format!",
-                contextInfo: {
+                /*contextInfo: {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
@@ -33,7 +33,7 @@ async function pairCommand(sock, chatId, message, q) {
                         newsletterName: 'KnightBot MD',
                         serverMessageId: -1
                     }
-                }
+                }*/
             });
         }
 
@@ -44,7 +44,7 @@ async function pairCommand(sock, chatId, message, q) {
             if (!result[0]?.exists) {
                 return await sock.sendMessage(chatId, {
                     text: `That number is not registered on WhatsApp❗️`,
-                    contextInfo: {
+                   /* contextInfo: {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
@@ -52,13 +52,13 @@ async function pairCommand(sock, chatId, message, q) {
                             newsletterName: 'KnightBot MD',
                             serverMessageId: -1
                         }
-                    }
+                    }*/
                 });
             }
 
             await sock.sendMessage(chatId, {
                 text: "Wait a moment for the code",
-                contextInfo: {
+              /*  contextInfo: {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
@@ -66,7 +66,7 @@ async function pairCommand(sock, chatId, message, q) {
                         newsletterName: 'KnightBot MD',
                         serverMessageId: -1
                     }
-                }
+                }*/
             });
 
             try {
@@ -81,7 +81,7 @@ async function pairCommand(sock, chatId, message, q) {
                     await sleep(5000);
                     await sock.sendMessage(chatId, {
                         text: `Your pairing code: ${code}`,
-                        contextInfo: {
+                       /* contextInfo: {
                             forwardingScore: 1,
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
@@ -89,7 +89,7 @@ async function pairCommand(sock, chatId, message, q) {
                                 newsletterName: 'KnightBot MD',
                                 serverMessageId: -1
                             }
-                        }
+                        }*/
                     });
                 } else {
                     throw new Error('Invalid response from server');
@@ -102,7 +102,7 @@ async function pairCommand(sock, chatId, message, q) {
                 
                 await sock.sendMessage(chatId, {
                     text: errorMessage,
-                    contextInfo: {
+                    /*contextInfo: {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
@@ -110,7 +110,7 @@ async function pairCommand(sock, chatId, message, q) {
                             newsletterName: 'KnightBot MD',
                             serverMessageId: -1
                         }
-                    }
+                    }*/
                 });
             }
         }
@@ -118,7 +118,7 @@ async function pairCommand(sock, chatId, message, q) {
         console.error(error);
         await sock.sendMessage(chatId, {
             text: "An error occurred. Please try again later.",
-            contextInfo: {
+            /*contextInfo: {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
@@ -126,7 +126,7 @@ async function pairCommand(sock, chatId, message, q) {
                     newsletterName: 'KnightBot MD',
                     serverMessageId: -1
                 }
-            }
+            }*/
         });
     }
 }
