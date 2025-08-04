@@ -150,7 +150,7 @@ async function startXeonBotInc() {
                 if (mek.key && mek.key.remoteJid) {
                     await XeonBotInc.sendMessage(mek.key.remoteJid, {
                         text: '❌ An error occurred while processing your message.',
-                        contextInfo: {
+                        /*contextInfo: {
                             forwardingScore: 1,
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
@@ -158,7 +158,7 @@ async function startXeonBotInc() {
                                 newsletterName: 'KnightBot MD',
                                 serverMessageId: -1
                             }
-                        }
+                        }*/
                     }).catch(console.error);
                 }
             }
@@ -250,7 +250,7 @@ async function startXeonBotInc() {
             await XeonBotInc.sendMessage(botNumber, {
                 text: `🤖 Bot Connected Successfully!\n\n⏰ Time: ${new Date().toLocaleString()}\n✅ Status: Online and Ready!
                 \n✅Make sure to join below channel`,
-                contextInfo: {
+                /*contextInfo: {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
@@ -258,7 +258,7 @@ async function startXeonBotInc() {
                         newsletterName: 'KnightBot MD',
                         serverMessageId: -1
                     }
-                }
+                }*/
             });
 
             const knightbotstart = '120363161513685998@newsletter';
