@@ -345,7 +345,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                     const currentMode = data.isPublic ? 'public' : 'private';
                     await sock.sendMessage(chatId, {
                         text: `Current bot mode: *${currentMode}*\n\nUsage: .mode public/private\n\nExample:\n.mode public - Allow everyone to use bot\n.mode private - Restrict to owner only`,
-                        ...channelInfo
+                        
                     });
                     return;
                 }
@@ -353,7 +353,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 if (action !== 'public' && action !== 'private') {
                     await sock.sendMessage(chatId, {
                         text: 'Usage: .mode public/private\n\nExample:\n.mode public - Allow everyone to use bot\n.mode private - Restrict to owner only',
-                        ...channelInfo
+                        
                     });
                     return;
                 }
@@ -806,7 +806,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
         if (chatId) {
             await sock.sendMessage(chatId, {
                 text: '❌ Failed to process command!',
-                ...channelInfo
+                
             });
         }
     }
