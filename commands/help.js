@@ -237,7 +237,7 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
+                        newsletterJid: '120363402617190786@newsletter',
                         newsletterName: 'KnightBot MD',
                         serverMessageId: -1
                     }
