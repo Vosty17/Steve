@@ -225,7 +225,7 @@ async function helpCommand(sock, chatId, message) {
 Join our channel for updates:`;
 
     try {
-        const imagePath = path.join(__dirname, '../assets/bot_image.jpg');
+        const imagePath = path.join(__dirname, '../assets/assets/IMG_20260129_115902.jpg');
         
         if (fs.existsSync(imagePath)) {
             const imageBuffer = fs.readFileSync(imagePath);
@@ -238,7 +238,7 @@ Join our channel for updates:`;
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363402617190786@newsletter',
-                        newsletterName: 'KnightBot MD',
+                        newsletterName: 'VOSTY_BOT MD',
                         serverMessageId: -1
                     }
                 }
@@ -251,8 +251,8 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD by Mr Unique Hacker',
+                        newsletterJid: '120363402617190786@newsletter',
+                        newsletterName: 'VOSTY_BOT MD by Eng. Stephen',
                         serverMessageId: -1
                     } 
                 }
